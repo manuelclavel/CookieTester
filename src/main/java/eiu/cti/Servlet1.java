@@ -27,7 +27,7 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
  
   
     	//response.addHeader("Access-Control-Allow-Origin", "*");
-		CookieHeader.createSetCookieHeader(response, "servlet1", "servlet1 cookie", "13.229.227.163", "/", "None", true, false, 900);
+		CookieHeader.createSetCookieHeader(response, "servlet1", "servlet1 cookie", "13.229.227.163", "/", "None", false, false, 900);
     	response.addHeader("Access-Control-Allow-Credentials", "true");
         }catch(Exception e){System.out.println(e);}  
   } 
