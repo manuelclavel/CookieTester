@@ -31,7 +31,7 @@ $(document).ready(function() {
 	$("#go_servlet2").click(function() {
 		
 		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'http://www.tanbinhtech.com/cookietester/servlet2', true);
+		xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/servlet2', true);
 		xhr.withCredentials = true;
 		xhr.send(null);
 		})
