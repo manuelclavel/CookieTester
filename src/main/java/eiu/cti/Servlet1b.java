@@ -17,7 +17,7 @@ public class Servlet1b extends HttpServlet {
 		try {
 			response.setContentType("text/html");
 			CookieHeader.createSetCookieHeader(response, "servlet1b", "servlet1b cookie", "www.tanbinhtech.com", "/",
-					"None", false, false, 900);
+					"None", true, false, 900);
 			response.addHeader("Access-Control-Allow-Credentials", "true");
 			response.addHeader("Access-Control-Allow-Origin", "http://localhost:8080");
 		} catch (Exception e) {
