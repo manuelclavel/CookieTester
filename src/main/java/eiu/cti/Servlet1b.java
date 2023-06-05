@@ -1,10 +1,13 @@
 package eiu.cti;
 
 import java.io.IOException;
+
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@WebServlet(name = "Servlet1b", urlPatterns = { "/servlet1b" }, loadOnStartup = 1)
 public class Servlet1b extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
