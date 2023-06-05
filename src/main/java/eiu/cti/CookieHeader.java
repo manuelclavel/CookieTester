@@ -103,7 +103,5 @@ public final class CookieHeader {
 		String cookieHeader = createSetCookieHeader(cookieName, cookieValue, domain, path, sameSite, isSecure,
 				isHttpOnly, maxAge);
 		httpServletResponse.addHeader(SET_COOKIE, cookieHeader);
-		//httpServletResponse.addHeader("Access-Control-Allow-Origin", "*");
-		httpServletResponse.addHeader("Access-Control-Allow-Origin", "https://localhost:8443");
 	}
 }

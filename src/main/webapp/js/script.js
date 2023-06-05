@@ -15,7 +15,7 @@ $(document).ready(function() {
 		
 		var xhr = new XMLHttpRequest();
 		//xhr.open('GET', 'https://www.tanbinhtech.com/mycookies/servlet1', true);
-		xhr.open('GET', 'https://www.tanbinhtech.com/mycookies/servlet1', true)
+		xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/servlet1', true)
 		xhr.withCredentials = true;
 		xhr.send(null);
 		})
@@ -23,7 +23,7 @@ $(document).ready(function() {
 	$("#go_servlet1b").click(function() {
 		
 		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'https://www.tanbinhtech.com/mycookies/servlet1b', true);
+		xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/servlet1b', true);
 		xhr.withCredentials = true;
 		xhr.send(null);
 		})
@@ -31,7 +31,7 @@ $(document).ready(function() {
 	$("#go_servlet2").click(function() {
 		
 		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'http://www.tanbinhtech.com/mycookies/servlet2', true);
+		xhr.open('GET', 'http://www.tanbinhtech.com/cookietester/servlet2', true);
 		xhr.withCredentials = true;
 		xhr.send(null);
 		})
@@ -39,7 +39,7 @@ $(document).ready(function() {
 	$("#go_servlet3").click(function() {
 		
 		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'https://www.tanbinhtech.com/mycookies/servlet3', true);
+		xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/servlet3', true);
 		xhr.withCredentials = true;
 		xhr.send(null);
 		})
