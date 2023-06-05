@@ -1,6 +1,5 @@
 package eiu.cti;
 
-//import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
@@ -22,18 +21,6 @@ public final class CookieHeader {
 	public static final String SEPERATOR = "; ";
 	public static final String ASSIGN = "=";
 
-	/**
-	 * Creates a string with key value pairs used in a HttpCookie with ; delimiter
-	 * @param cookieName
-	 * @param cookieValue
-	 * @param domain
-	 * @param path
-	 * @param sameSite
-	 * @param isSecure
-	 * @param isHttpOnly
-	 * @param maxAge
-	 * @return returns a string with key value pairs used in a HttpCookie with ; delimiter
-	 */
 	public static String createSetCookieHeader(String cookieName, String cookieValue, String domain, String path,
 											   String sameSite, boolean isSecure, boolean isHttpOnly, Integer maxAge) {
 		/*
@@ -61,23 +48,13 @@ public final class CookieHeader {
 		return cookieString.toString();
 	}
 
-	/**
-	 * Creates a string with key value pairs used in a HttpCookie with ; delimiter
-	 * @param cookie
-	 * @param sameSite
-	 * @return
-	 */
+
 	public static String createSetCookieHeader(Cookie cookie, String sameSite) {
 		return createSetCookieHeader(cookie.getName(), cookie.getValue(), cookie.getDomain(), cookie.getPath(),
 				sameSite, cookie.getSecure(), cookie.isHttpOnly(), cookie.getMaxAge());
 	}
 
-	/**
-	 * Creates a Set-Cookie header and adds it to HttpServletResponse
-	 * @param httpServletResponse
-	 * @param cookie
-	 * @param sameSite
-	 */
+
 	public static void createSetCookieHeader(HttpServletResponse httpServletResponse, Cookie cookie, String sameSite) {
 		String cookieHeader = createSetCookieHeader(cookie.getName(), cookie.getValue(), cookie.getDomain(),
 				cookie.getPath(), sameSite, cookie.getSecure(), cookie.isHttpOnly(), cookie.getMaxAge());
@@ -85,18 +62,7 @@ public final class CookieHeader {
 		httpServletResponse.addHeader(SET_COOKIE, cookieHeader);
 	}
 
-	/**
-	 * Creates a Set-Cookie header and adds it to HttpServletResponse
-	 * @param httpServletResponse
-	 * @param cookieName
-	 * @param cookieValue
-	 * @param domain
-	 * @param path
-	 * @param sameSite
-	 * @param isSecure
-	 * @param isHttpOnly
-	 * @param maxAge
-	 */
+
 	public static void createSetCookieHeader(HttpServletResponse httpServletResponse, String cookieName,
 											 String cookieValue, String domain, String path, String sameSite,
 											 boolean isSecure, boolean isHttpOnly, Integer maxAge) {
