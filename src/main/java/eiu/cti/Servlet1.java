@@ -31,7 +31,7 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
     	response.addHeader("Access-Control-Allow-Credentials", "true");
     	//httpServletResponse.addHeader("Access-Control-Allow-Origin", "*");
     	//httpServletResponse.addHeader("Access-Control-Allow-Origin", "https://localhost:8443");
-    	response.addHeader("Access-Control-Allow-Origin", "https://localhost:8080");
+    	response.addHeader("Access-Control-Allow-Origin", "http://localhost:8080");
         }catch(Exception e){
         	System.out.println(e);}  
   } 
