@@ -42,7 +42,7 @@ public class ServletCheck extends HttpServlet {
 					}
 				}
 			} else {
-				reqCookies.append(request.toString());
+				reqCookies.append("No cookies");
 			}
 
 			// CookieHeader.
