@@ -15,27 +15,22 @@ $(document).ready(function() {
 	$("#go_servlet1").click(function() {
 		
 		var xhr = new XMLHttpRequest();
-		//xhr.withCredentials = false;
 		xhr.withCredentials = true;
 		xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/servlet1', true)
-		//xhr.open('GET', 'https://' + window.location.host + '/cookietester/servlet1', true);
 		xhr.send(null);
 		})
 		
 	$("#go_servlet1b").click(function() {
 		
 		var xhr = new XMLHttpRequest();
-		//xhr.withCredentials = false;
 		xhr.withCredentials = true;
 		xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/servlet1b', true);
-		//xhr.open('GET', 'https://' + window.location.host + '/cookietester/servlet1b', true);
 		xhr.send(null);
 		})
 		
 	$("#go_servlet2").click(function() {
 		
 		var xhr = new XMLHttpRequest();
-		//xhr.withCredentials = false;
 		xhr.withCredentials = true;
 		xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/servlet2', true);
 		xhr.send(null);
@@ -44,7 +39,6 @@ $(document).ready(function() {
 	$("#go_servlet3").click(function() {
 		
 		var xhr = new XMLHttpRequest();
-		//xhr.withCredentials = false;
 		xhr.withCredentials = true;
 		xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/servlet3', true);	
 		xhr.send(null);
@@ -66,7 +60,6 @@ $(document).ready(function() {
 		}
 	}
 		xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/check', true);	
-		//xhr.open('GET', 'https://' + window.location.host + '/cookietester/check', true);
 		xhr.send(null);
 	})
 
