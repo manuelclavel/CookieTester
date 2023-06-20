@@ -24,41 +24,42 @@ public class ServletCheck extends HttpServlet {
 		try {
 
 			response.setContentType("text/plain");
-			
+
 			StringBuilder reqCookies = new StringBuilder();
-			
+
 			Cookie ck[] = request.getCookies();
 			if (ck != null) {
-			for (int i = 0; i < ck.length; i++) {
-				reqCookies.append("Some cookies: ");
-				if (ck[i].getName().equals("servlet1")) {
-					reqCookies.append("servlet1;");
-				} else if (ck[i].getName().equals("servlet1b")) {
-					reqCookies.append("servlet1b;");
-				} else if (ck[i].getName().equals("servlet2")) {
-					reqCookies.append("servlet2;");
-				} else if (ck[i].getName().equals("servlet3")) {
+				for (int i = 0; i < ck.length; i++) {
+					reqCookies.append("Some cookies: ");
+					if (ck[i].getName().equals("servlet1")) {
+						reqCookies.append("servlet1;");
+					} else if (ck[i].getName().equals("servlet1b")) {
+						reqCookies.append("servlet1b;");
+					} else if (ck[i].getName().equals("servlet2")) {
+						reqCookies.append("servlet2;");
+					} else if (ck[i].getName().equals("servlet3")) {
 						reqCookies.append("servlet3;");
-				} 
-			}
+					}
+				}
 			} else {
 				reqCookies.append("No cookies");
 			}
-			
-			//CookieHeader.
-			//    createSetCookieHeader(response,
-			//			  "servlet1", "servlet1 cookie",
-			//			  "www.tanbinhtech.com", "/", "None",
-			//			  false, false, 900);
+
+			// CookieHeader.
+			// createSetCookieHeader(response,
+			// "servlet1", "servlet1 cookie",
+			// "www.tanbinhtech.com", "/", "None",
+			// false, false, 900);
 			response.addHeader("Access-Control-Allow-Credentials", "true");
-			//response.addHeader("Access-Control-Allow-Origin", "*");
-			//Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at ‘https://www.tanbinhtech.com/cookietester/check’. 
-			//	(Reason: Credential is not supported if the CORS header ‘Access-Control-Allow-Origin’ is ‘*’).
+			// response.addHeader("Access-Control-Allow-Origin", "*");
+			// Cross-Origin Request Blocked: The Same Origin Policy disallows reading the
+			// remote resource at ‘https://www.tanbinhtech.com/cookietester/check’.
+			// (Reason: Credential is not supported if the CORS header
+			// ‘Access-Control-Allow-Origin’ is ‘*’).
 			response.addHeader("Access-Control-Allow-Origin", "http://localhost:8080");
-			
-		
+
 			PrintWriter writer = response.getWriter();
-			//writer.println(Integer.valueOf(ck.length) + reqCookies.toString());
+			// writer.println(Integer.valueOf(ck.length) + reqCookies.toString());
 			writer.println(reqCookies.toString());
 		} catch (Exception e) {
 			PrintWriter writer = response.getWriter();
