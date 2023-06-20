@@ -18,7 +18,7 @@ public class Servlet3 extends HttpServlet {
 			response.setContentType("text/html");
 			//CookieHeader.createSetCookieHeader(response, "servlet3", "servlet3", "www.tanbinhtech.com", "/",
 			//		"Strict", true, false, 900);
-			response.setHeader("Set-Cookie", "servlet1b=servlet1b; Domain=www.tanbinhtech.com; Path=/cookietester; SameSite=Strict; Secure; Max-Age=600;");
+			response.setHeader("Set-Cookie", "servlet3=servlet3; Domain=www.tanbinhtech.com; Path=/cookietester; SameSite=Strict; Secure; Max-Age=600;");
 			
 			response.addHeader("Access-Control-Allow-Credentials", "true");
 			response.addHeader("Access-Control-Allow-Origin", "http://localhost:8080");

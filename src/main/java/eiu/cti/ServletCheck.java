@@ -30,7 +30,7 @@ public class ServletCheck extends HttpServlet {
 			Cookie ck[] = request.getCookies();
 			if (ck != null) {
 				for (int i = 0; i < ck.length; i++) {
-					reqCookies.append("Some cookies: ");
+					//reqCookies.append("Some cookies: ");
 					if (ck[i].getName().equals("servlet1")) {
 						reqCookies.append("servlet1;");
 					} else if (ck[i].getName().equals("servlet1b")) {
