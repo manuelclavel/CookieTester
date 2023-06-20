@@ -57,10 +57,11 @@ public class ServletCheck extends HttpServlet {
 			
 		
 			PrintWriter writer = response.getWriter();
-			writer.println(Integer.valueOf(ck.length) + reqCookies.toString());
-			
+			//writer.println(Integer.valueOf(ck.length) + reqCookies.toString());
+			writer.println("vamos");
 		} catch (Exception e) {
-			System.out.println(e);
+			PrintWriter writer = response.getWriter();
+			writer.println(e.toString());
 		}
 	}
 
