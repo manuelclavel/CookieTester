@@ -59,7 +59,7 @@ $(document).ready(function() {
 			if (xhr.status == 200) {
 			alert(xhr.responseText)
 			} else {
-				alert(xhr.status + " : " + xhr.responseText);
+				alert(xhr.responseText);
 			}
 		}
 	}

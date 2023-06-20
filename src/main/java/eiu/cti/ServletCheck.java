@@ -36,7 +36,7 @@ public class ServletCheck extends HttpServlet {
 					reqCookies.append("servlet2;");
 				} else if (ck[i].getName().equals("servlet3")) {
 						reqCookies.append("servlet3;");
-				}
+				} 
 			}
 			
 			//CookieHeader.
@@ -48,11 +48,10 @@ public class ServletCheck extends HttpServlet {
 			//response.addHeader("Access-Control-Allow-Origin", "*");
 			//Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at ‘https://www.tanbinhtech.com/cookietester/check’. 
 			//	(Reason: Credential is not supported if the CORS header ‘Access-Control-Allow-Origin’ is ‘*’).
-			response.addHeader("Access-Control-Allow-Origin",
-					   "http://localhost:8080");
+			response.addHeader("Access-Control-Allow-Origin", "http://localhost:8080");
 			
 			Writer writer = response.getWriter();
-			writer.write(reqCookies.toString());
+			writer.write(Integer.valueOf(ck.length) + reqCookies.toString());
 		} catch (Exception e) {
 			System.out.println(e);
 		}
