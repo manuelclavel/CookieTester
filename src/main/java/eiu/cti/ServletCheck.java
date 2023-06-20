@@ -27,6 +27,7 @@ public class ServletCheck extends HttpServlet {
 			StringBuilder reqCookies = new StringBuilder();
 			
 			Cookie ck[] = request.getCookies();
+			if (ck != null) {
 			for (int i = 0; i < ck.length; i++) {
 				if (ck[i].getName().equals("servlet1")) {
 					reqCookies.append("servlet1;");
@@ -37,6 +38,9 @@ public class ServletCheck extends HttpServlet {
 				} else if (ck[i].getName().equals("servlet3")) {
 						reqCookies.append("servlet3;");
 				} 
+			}
+			} else {
+				reqCookies.append("No cookies");
 			}
 			
 			//CookieHeader.
