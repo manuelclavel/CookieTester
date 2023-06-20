@@ -65,8 +65,8 @@ $(document).ready(function() {
 			}
 		}
 	}
-		//xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/check', true);	
-		xhr.open('GET', 'https://' + window.location.host + '/cookietester/check', true);
+		xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/check', true);	
+		//xhr.open('GET', 'https://' + window.location.host + '/cookietester/check', true);
 		xhr.send(null);
 	})
 
