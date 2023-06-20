@@ -16,7 +16,7 @@ public class Servlet3 extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		try {
 			response.setContentType("text/html");
-			CookieHeader.createSetCookieHeader(response, "servlet3", "servlet3 cookie", "www.tanbinhtech.com", "/",
+			CookieHeader.createSetCookieHeader(response, "servlet3", "servlet3", "www.tanbinhtech.com", "/",
 					"Strict", true, false, 900);
 			response.addHeader("Access-Control-Allow-Credentials", "true");
 			response.addHeader("Access-Control-Allow-Origin", "http://localhost:8080");
