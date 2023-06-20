@@ -23,20 +23,10 @@ public class Servlet1 extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
 		try {
-			Cookie newck = new Cookie("servlet1", "servlet1 cookie");// creating cookie with token
-			newck.setHttpOnly(false);
-			newck.setDomain("www.tanbinhtech.com");
-			newck.setPath("/");
-			newck.setSecure(true);
-			newck.setMaxAge(60000);
-			response.addCookie(newck);// adding cookie in the response
-
-			response.setContentType("text/html");
-			//CookieHeader.createSetCookieHeader(response, "servlet1", "servlet1 cookie", "www.tanbinhtech.com", "/",
-			//		"None", false, false, 900);
 			response.addHeader("Access-Control-Allow-Credentials", "true");
 			// response.addHeader("Access-Control-Allow-Origin", "*");
 			response.addHeader("Access-Control-Allow-Origin", "http://localhost:8080");
+			response.setHeader("Set-Cookie", "servlet1=servlet1 cookie; Domain=www.tanbinhtech.com; Path=/; SameSite=None; Secure; Max-Age=900;");
 		} catch (Exception e) {
 			System.out.println(e);
 		}
