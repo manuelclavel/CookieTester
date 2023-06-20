@@ -17,8 +17,8 @@ $(document).ready(function() {
 		var xhr = new XMLHttpRequest();
 		//xhr.withCredentials = false;
 		xhr.withCredentials = true;
-		//xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/servlet1', true)
-		xhr.open('GET', 'https://' + window.location.host + '/cookietester/servlet1', true);
+		xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/servlet1', true)
+		//xhr.open('GET', 'https://' + window.location.host + '/cookietester/servlet1', true);
 		xhr.send(null);
 		})
 		
@@ -28,6 +28,7 @@ $(document).ready(function() {
 		//xhr.withCredentials = false;
 		xhr.withCredentials = true;
 		xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/servlet1b', true);
+		//xhr.open('GET', 'https://' + window.location.host + '/cookietester/servlet1b', true);
 		xhr.send(null);
 		})
 		
