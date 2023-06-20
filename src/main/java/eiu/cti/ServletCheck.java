@@ -2,6 +2,7 @@
 package eiu.cti;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.Writer;
 
 import javax.servlet.annotation.WebServlet;
@@ -54,8 +55,10 @@ public class ServletCheck extends HttpServlet {
 			//	(Reason: Credential is not supported if the CORS header ‘Access-Control-Allow-Origin’ is ‘*’).
 			response.addHeader("Access-Control-Allow-Origin", "http://localhost:8080");
 			
-			Writer writer = response.getWriter();
-			writer.write(Integer.valueOf(ck.length) + reqCookies.toString());
+		
+			PrintWriter writer = response.getWriter();
+			writer.println(Integer.valueOf(ck.length) + reqCookies.toString());
+			
 		} catch (Exception e) {
 			System.out.println(e);
 		}
