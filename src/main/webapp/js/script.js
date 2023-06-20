@@ -46,7 +46,18 @@ $(document).ready(function() {
 		xhr.withCredentials = true;
 		xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/servlet3', true);	
 		xhr.send(null);
-		})
+	})
+
+    	$("#check_cookies").click(function() {
+		
+		var xhr = new XMLHttpRequest();
+		//xhr.withCredentials = false;
+		xhr.withCredentials = true;
+		xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/check', true);	
+		xhr.send(null);
+	})
+
+    
 })
 
 
