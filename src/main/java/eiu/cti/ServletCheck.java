@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.Writer;
 
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,6 +24,21 @@ public class ServletCheck extends HttpServlet {
 
 			response.setContentType("text/plain");
 			
+			StringBuilder reqCookies = new StringBuilder();
+			
+			Cookie ck[] = request.getCookies();
+			for (int i = 0; i < ck.length; i++) {
+				if (ck[i].getName().equals("servlet1")) {
+					reqCookies.append("servlet1;");
+				} else if (ck[i].getName().equals("servlet1b")) {
+					reqCookies.append("servlet1b;");
+				} else if (ck[i].getName().equals("servlet2")) {
+					reqCookies.append("servlet2;");
+				} else if (ck[i].getName().equals("servlet3")) {
+						reqCookies.append("servlet3;");
+				}
+			}
+			
 			//CookieHeader.
 			//    createSetCookieHeader(response,
 			//			  "servlet1", "servlet1 cookie",
@@ -34,10 +50,9 @@ public class ServletCheck extends HttpServlet {
 			//	(Reason: Credential is not supported if the CORS header ‘Access-Control-Allow-Origin’ is ‘*’).
 			response.addHeader("Access-Control-Allow-Origin",
 					   "http://localhost:8080");
-			StringBuilder message = new StringBuilder();
-			message.append("hi");
+			
 			Writer writer = response.getWriter();
-			writer.write(message.toString());
+			writer.write(reqCookies.toString());
 		} catch (Exception e) {
 			System.out.println(e);
 		}

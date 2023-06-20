@@ -53,6 +53,16 @@ $(document).ready(function() {
 		var xhr = new XMLHttpRequest();
 		//xhr.withCredentials = false;
 		xhr.withCredentials = true;
+		
+		xhr.onreadystatechange = () => {
+		if (xhr.readyState === 4) {
+			if (xhr.status == 200) {
+			alert(xhr.responseText)
+			} else {
+				alert(xhr.status + " : " + xhr.responseText);
+			}
+		}
+	}
 		xhr.open('GET', 'https://www.tanbinhtech.com/cookietester/check', true);	
 		xhr.send(null);
 	})
