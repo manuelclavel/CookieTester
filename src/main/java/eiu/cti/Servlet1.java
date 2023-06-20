@@ -24,7 +24,7 @@ public class Servlet1 extends HttpServlet {
 
 		try {
 			Cookie newck = new Cookie("servlet1", "servlet1 cookie");// creating cookie with token
-			//response.addCookie(newck);// adding cookie in the response
+			response.addCookie(newck);// adding cookie in the response
 
 			response.setContentType("text/html");
 			//CookieHeader.createSetCookieHeader(response, "servlet1", "servlet1 cookie", "www.tanbinhtech.com", "/",
