@@ -30,6 +30,7 @@ public class ServletCheck extends HttpServlet {
 			Cookie ck[] = request.getCookies();
 			if (ck != null) {
 			for (int i = 0; i < ck.length; i++) {
+				reqCookies.append("Some cookies: ");
 				if (ck[i].getName().equals("servlet1")) {
 					reqCookies.append("servlet1;");
 				} else if (ck[i].getName().equals("servlet1b")) {
@@ -58,7 +59,7 @@ public class ServletCheck extends HttpServlet {
 		
 			PrintWriter writer = response.getWriter();
 			//writer.println(Integer.valueOf(ck.length) + reqCookies.toString());
-			writer.println("vamos");
+			writer.println(reqCookies.toString());
 		} catch (Exception e) {
 			PrintWriter writer = response.getWriter();
 			writer.println(e.toString());
