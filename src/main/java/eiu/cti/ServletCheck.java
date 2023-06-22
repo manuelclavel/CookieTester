@@ -20,9 +20,7 @@ public class ServletCheck extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
 		try {
-
 			response.setContentType("text/plain");
 
 			StringBuilder reqCookies = new StringBuilder();
@@ -30,21 +28,12 @@ public class ServletCheck extends HttpServlet {
 			Cookie ck[] = request.getCookies();
 			if (ck != null) {
 				for (int i = 0; i < ck.length; i++) {
-					//reqCookies.append("Some cookies: ");
-					if (ck[i].getName().equals("servlet1")) {
-						reqCookies.append("servlet1;");
-					} else if (ck[i].getName().equals("servlet1b")) {
-						reqCookies.append("servlet1b;");
-					} else if (ck[i].getName().equals("servlet2")) {
-						reqCookies.append("servlet2;");
-					} else if (ck[i].getName().equals("servlet3")) {
-						reqCookies.append("servlet3;");
+					reqCookies.append(ck[i].getName());
 					}
-				}
 			} else {
 				reqCookies.append("No cookies");
 			}
-
+			
 			// CookieHeader.
 			// createSetCookieHeader(response,
 			// "servlet1", "servlet1 cookie",
