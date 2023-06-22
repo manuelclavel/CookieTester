@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "Servlet2", urlPatterns = { "/servlet2lk" }, loadOnStartup = 1)
+@WebServlet(name = "Servlet2lk", urlPatterns = { "/servlet2lk" }, loadOnStartup = 1)
 public class Servlet2lk extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;

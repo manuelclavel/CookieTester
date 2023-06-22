@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "Servlet3", urlPatterns = { "/servlet3lk" }, loadOnStartup = 1)
+@WebServlet(name = "Servlet3lk", urlPatterns = { "/servlet3lk" }, loadOnStartup = 1)
 public class Servlet3lk extends HttpServlet {
 
 
