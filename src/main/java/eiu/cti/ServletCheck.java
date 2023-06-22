@@ -28,7 +28,7 @@ public class ServletCheck extends HttpServlet {
 			Cookie ck[] = request.getCookies();
 			if (ck != null) {
 				for (int i = 0; i < ck.length; i++) {
-					reqCookies.append(ck[i].getName());
+					reqCookies.append(ck[i].getName() + "; ");
 					}
 			} else {
 				reqCookies.append("No cookies");
