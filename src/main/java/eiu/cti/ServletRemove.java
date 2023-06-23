@@ -18,9 +18,9 @@ public class ServletRemove extends HttpServlet {
 			response.addHeader("Access-Control-Allow-Credentials", "true");
 			response.addHeader("Access-Control-Allow-Origin", "http://localhost:8080");
 			response.addHeader("Set-Cookie",
-					"cookie1=; Max-Age=0;");
+					"cookie1=cookie1;Domain=www.tanbinhtech.com;Path=/cookietester;SameSite=None;Max-Age=0;");
 			response.addHeader("Set-Cookie",
-					"cookie1b=; Max-Age=0;");
+					"cookie1b=cookie1b;Domain=www.tanbinhtech.com;Path=/cookietester;SameSite=None;Secure;Max-Age=0;");
 			response.addHeader("Set-Cookie",
 					"cookie2=; Max-Age=0;");
 			response.addHeader("Set-Cookie",
