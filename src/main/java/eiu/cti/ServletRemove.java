@@ -24,7 +24,7 @@ public class ServletRemove extends HttpServlet {
 			response.addHeader("Set-Cookie",
 					"cookie2=cookie2; Domain=www.tanbinhtech.com;Path=/cookietester;SameSite=Lax;Secure;Max-Age=0;");
 			response.addHeader("Set-Cookie",
-					"cookie3=cookie3lk;Domain=www.tanbinhtech.com;Path=/cookietester;SameSite=Strict;Secure;Max-Age=0;");
+					"cookie3=cookie3;Domain=www.tanbinhtech.com;Path=/cookietester;SameSite=Strict;Secure;Max-Age=0;");
 			response.addHeader("Set-Cookie",
 					"cookie2lk=cookie2lk;Domain=www.tanbinhtech.com;Path=/cookietester;SameSite=Lax;Secure;Max-Age=0;");
 			response.addHeader("Set-Cookie",
