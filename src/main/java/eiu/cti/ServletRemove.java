@@ -18,17 +18,18 @@ public class ServletRemove extends HttpServlet {
 			response.addHeader("Access-Control-Allow-Credentials", "true");
 			response.addHeader("Access-Control-Allow-Origin", "http://localhost:8080");
 			response.setHeader("Set-Cookie",
-					"cookie1=cookie1; Domain=www.tanbinhtech.com; Path=/cookietester; Max-Age=0;");
+					"cookie1=; Max-Age=0;");
 			response.setHeader("Set-Cookie",
-					"cookie1b=cookie1b; Domain=www.tanbinhtech.com; Path=/cookietester; Max-Age=0;");
+					"cookie1b=; Max-Age=0;");
 			response.setHeader("Set-Cookie",
-					"cookie2=cookie2; Domain=www.tanbinhtech.com; Path=/cookietester; Max-Age=0;");
+					"cookie2=; Max-Age=0;");
 			response.setHeader("Set-Cookie",
-					"cookie3=cookie3; Domain=www.tanbinhtech.com; Path=/cookietester; Max-Age=0;");
+					"cookie3=; Max-Age=0;");
 			response.setHeader("Set-Cookie",
-					"cookie2lk=cookie2lk; Domain=www.tanbinhtech.com; Path=/cookietester; Max-Age=0;");
+					"cookie2lk=; Max-Age=0;");
 			response.setHeader("Set-Cookie",
-					"cookie3lk=cookie3lk; Domain=www.tanbinhtech.com; Path=/cookietester; Max-Age=0;");
+					"cookie3lk=;Max-Age=0;");
+			// response.addCookie(cookie);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
