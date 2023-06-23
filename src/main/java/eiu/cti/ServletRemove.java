@@ -17,17 +17,17 @@ public class ServletRemove extends HttpServlet {
 		try {
 			response.addHeader("Access-Control-Allow-Credentials", "true");
 			response.addHeader("Access-Control-Allow-Origin", "http://localhost:8080");
-			response.setHeader("Set-Cookie",
+			response.addHeader("Set-Cookie",
 					"cookie1=; Max-Age=0;");
-			response.setHeader("Set-Cookie",
+			response.addHeader("Set-Cookie",
 					"cookie1b=; Max-Age=0;");
-			response.setHeader("Set-Cookie",
+			response.addHeader("Set-Cookie",
 					"cookie2=; Max-Age=0;");
-			response.setHeader("Set-Cookie",
+			response.addHeader("Set-Cookie",
 					"cookie3=; Max-Age=0;");
-			response.setHeader("Set-Cookie",
+			response.addHeader("Set-Cookie",
 					"cookie2lk=; Max-Age=0;");
-			response.setHeader("Set-Cookie",
+			response.addHeader("Set-Cookie",
 					"cookie3lk=;Max-Age=0;");
 			// response.addCookie(cookie);
 		} catch (Exception e) {
