@@ -22,14 +22,13 @@ public class ServletRemove extends HttpServlet {
 			response.addHeader("Set-Cookie",
 					"cookie1b=cookie1b;Domain=www.tanbinhtech.com;Path=/cookietester;SameSite=None;Secure;Max-Age=0;");
 			response.addHeader("Set-Cookie",
-					"cookie2=; Max-Age=0;");
+					"cookie2=cookie2; Domain=www.tanbinhtech.com;Path=/cookietester;SameSite=Lax;Secure;Max-Age=0;");
 			response.addHeader("Set-Cookie",
-					"cookie3=; Max-Age=0;");
+					"cookie3=cookie3lk;Domain=www.tanbinhtech.com;Path=/cookietester;SameSite=Strict;Secure;Max-Age=0;");
 			response.addHeader("Set-Cookie",
-					"cookie2lk=; Max-Age=0;");
+					"cookie2lk=cookie2lk;Domain=www.tanbinhtech.com;Path=/cookietester;SameSite=Lax;Secure;Max-Age=0;");
 			response.addHeader("Set-Cookie",
-					"cookie3lk=;Max-Age=0;");
-			// response.addCookie(cookie);
+					"cookie3lk=cookie3lk;Domain=www.tanbinhtech.com;Path=/cookietester;SameSite=Strict;Secure;Max-Age=0;");
 		} catch (Exception e) {
 			System.out.println(e);
 		}

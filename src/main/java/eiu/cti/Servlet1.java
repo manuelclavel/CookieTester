@@ -26,7 +26,7 @@ public class Servlet1 extends HttpServlet {
 			response.addHeader("Access-Control-Allow-Credentials", "true");
 			// response.addHeader("Access-Control-Allow-Origin", "*");
 			response.addHeader("Access-Control-Allow-Origin", "http://localhost:8080");
-			response.setHeader("Set-Cookie", "cookie1=cookie1; Domain=www.tanbinhtech.com; Path=/cookietester; SameSite=None; Max-Age=600;");
+			response.setHeader("Set-Cookie", "cookie1=cookie1;Domain=www.tanbinhtech.com;Path=/cookietester;SameSite=None;Max-Age=6000;");
 			
 		} catch (Exception e) {
 			System.out.println(e);
